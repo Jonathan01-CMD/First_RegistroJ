@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="blazored.toast" Version="3.1.2" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.6" />
     <PackageReference Include="microsoft.EntityFrameWorkCore.SQLITE" Version="5.0.6" />
     <PackageReference Include="microsoft.EntityFrameWorkCore.Tools" Version="5.0.6">
