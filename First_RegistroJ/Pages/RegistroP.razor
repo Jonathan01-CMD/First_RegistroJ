@@ -1,4 +1,19 @@
-﻿<h3>RegistroP</h3>
+﻿@page "/Registro"
+@page "/Registro/{RegistroId:int}"
+
+@using First_RegistroJ.Models;
+@using First_RegistroJ.BLL;
+@using Blazored.Toast;
+@using Blazored.Toast.Services;
+
+
+@inject IToastService toast
+
+<EditForm Model="Personas" OnValidSubmit="Guardar"
+          <DataAnnotationsValidator/>
+          
+
+
 
 @code {
 

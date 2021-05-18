@@ -13,7 +13,7 @@ namespace First_RegistroJ.DAL
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-          //  optionsBuilder.UseSqlite(@"Data Source = Data/RegistroPersonas.db")
+            optionsBuilder.UseSqlite(@"Data Source = Data/RegistroPersonas.db");
         }
 
     }
