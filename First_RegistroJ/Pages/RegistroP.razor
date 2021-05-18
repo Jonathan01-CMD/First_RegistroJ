@@ -12,55 +12,61 @@
     <DataAnnotationsValidator/>
     <div class="card">
           <div class="card-header">
-              <h1>Registro de Personas</h1>
+              <h2>Registro Usuario</h2>
           </div>
           @*ID y boton de inicio*@
-          <div class="card-body">
-                <div class="form-row align-items-center">
-                    <div class="col">
-                        <div class="form-group">
-                            <label>RegistroID</label>
-                            <div class="input-group">
-                                <InputNumber @bind-Value="registro.RegistroId" class="form-control col-4" />
-                                <div class="input-group-append">
-                                    <button type="button" class="btn btn-primary input-group-text" @onclick="Buscar">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-search" viewBox="0 0 20 20">
-                                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
-                                        </svg> Buscar
-                                    </button>
-                                </div>
-                            </div>
+    <div class="card-body">
+        <div class="form-row align-items-center">
+            <div class="col">
+                <div class="form-group">
+                    <label>RegistroID</label>
+                    <div class="input-group">
+                        <InputNumber @bind-Value="registro.RegistroId" class="form-control col-4" />
+                        <div class="input-group-append">
+                            <button type="button" class="btn btn-primary input-group-text" @onclick="Buscar">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-search" viewBox="0 0 20 20">
+                                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                                </svg> Buscar
+                            </button>
                         </div>
                     </div>
                 </div>
-            @*Nombres*@
-                <div class="form-group">
-                    <label>Nombres</label>
-                    <InputText @bind-Value="registro.Nombres" class="form-control" />
-                    <ValidationMessage For="@(() => registro.Nombres)" />
-                </div>
+            </div>
+        </div>
+        @*Nombres*@
+        <div class="form-group">
+            <label>Nombres</label>
+            <InputText @bind-Value="registro.Nombres" class="form-control" />
+            <ValidationMessage For="@(() => registro.Nombres)" />
+        </div>
+        @*Edad*@
+        <div class="form-group">
+            <label>Edad</label>
+            <InputText @bind-Value="registro.Edad" class="form-control" />
+            <ValidationMessage For="@(() => registro.Edad)" />
+        </div>
 
-                @*Telefono*@
-                <div class="form-group">
-                    <label>Telefono</label>
-                    <InputText @bind-Value="registro.Telefono" class="form-control" />
-                    <ValidationMessage For="@(() => registro.Telefono)" />
-                </div>
+        @*Cedula*@
+        <div class="form-group">
+            <label>Cedula</label>
+            <InputText @bind-Value="registro.Cedula" class="form-control" />
+            <ValidationMessage For="@(() => registro.Cedula)" />
+        </div>
 
-                @*Cedula*@
-                <div class="form-group">
-                    <label>Cedula</label>
-                    <InputText @bind-Value="registro.Cedula" class="form-control" />
-                    <ValidationMessage For="@(() => registro.Cedula)" />
-                </div>
+        @*Telefono*@
+        <div class="form-group">
+            <label>Telefono</label>
+            <InputText @bind-Value="registro.Telefono" class="form-control" />
+            <ValidationMessage For="@(() => registro.Telefono)" />
+        </div>
 
-                @*Fecha de Nacimiento*@
-                <div class="form-group">
-                    <label>Fecha de Nacimiento</label>
-                    <InputDate @bind-Value="registro.FechaNacimiento" class="form-control" />
-                    <ValidationMessage For="@(() => registro.FechaNacimiento)" />
-                </div>
-           </div>
+        @*Fecha de Nacimiento*@
+        <div class="form-group">
+            <label>Fecha de Nacimiento</label>
+            <InputDate @bind-Value="registro.FechaNacimiento" class="form-control" />
+            <ValidationMessage For="@(() => registro.FechaNacimiento)" />
+        </div>
+    </div>
         @*Botones*@
             <div class="card-footer">
                 <div class="form-group text-center" display: inline-block>

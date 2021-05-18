@@ -94,7 +94,7 @@ namespace First_RegistroJ.BLL
                 var registro = db.Registros.Find(id);
                 if(registro != null)
                 {
-                    db.Registros.Remove(registro);//Eliminando el registro
+                    db.Registros.Remove(registro);
                     paso = db.SaveChanges() > 0;
                 }
             }
@@ -154,7 +154,6 @@ namespace First_RegistroJ.BLL
             Contexto db = new Contexto();
             try
             {
-                //obtener la lista y filtrarla según el criterio recibido por parametro.
                 lista = db.Registros.Where(criterio).ToList();
             }
             catch (Exception)

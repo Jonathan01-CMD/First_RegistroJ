@@ -26,6 +26,11 @@ namespace First_RegistroJ.Models
 
         public string Nombres { get; set; }
 
+        [Required(ErrorMessage = "Debe introducir la edad de la persona")]
+        [RegularExpression(@"\S(.*)\S", ErrorMessage = "Solo se aceptan datos numericos")]
+
+        public string Edad { get; set; }
+
         [Required(ErrorMessage = "No debe de estar Vacío el campo 'Telefono'")]
         [RegularExpression("^(?!0+$)(\\+\\d{1,3}[- ]?)?(?!0+$)\\d{10,15}$", ErrorMessage = "Por favor ingrese un No. de Teléfono válido.")]
         [MaxLength(10, ErrorMessage = "El campo 'Telefono' no tiene más de diez dígitos.")]
